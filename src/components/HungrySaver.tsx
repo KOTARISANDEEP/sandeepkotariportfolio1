@@ -129,6 +129,42 @@ const HungrySaver: React.FC = () => {
               ))}
             </div>
 
+            {/* Featured Video Card */}
+            <motion.div
+              className="relative overflow-hidden rounded-2xl glass-morphism hover-glow group"
+              whileHover={{ scale: 1.02 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <a
+                href="https://www.youtube.com/watch?v=xlMJ-YnSEoc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative block aspect-video overflow-hidden"
+              >
+                <img
+                  src="https://img.youtube.com/vi/xlMJ-YnSEoc/maxresdefault.jpg"
+                  alt="Hungry Saver Featured Video"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                  <motion.div
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center"
+                  >
+                    <div className="w-0 h-0 border-l-8 border-l-transparent border-r-0 border-t-5 border-t-transparent border-b-5 border-b-transparent ml-1" style={{
+                      borderTop: '8px solid transparent',
+                      borderBottom: '8px solid transparent',
+                      borderLeft: '12px solid white'
+                    }} />
+                  </motion.div>
+                </div>
+              </a>
+            </motion.div>
+
             {/* YouTube Channel Card */}
             <motion.div
               className="glass-morphism p-6 rounded-2xl hover-glow"
